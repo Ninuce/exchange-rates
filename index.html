@@ -1,0 +1,58 @@
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exchange rates</title>
+    <link href="stylesheet.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1>Exchange rates</h1>
+      <div class="container-intro">
+        <h2>Today's date:</h2>
+        <div id="dailyDisplay"></div>
+      </div>
+
+      <div class="container">
+        <h2>Search for an exchange rate:</h2>
+
+        <div class="rates">
+
+          <label>From:</label>
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+
+          <label>To:</label>
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+
+          <button id="byDate" onclick="displayName()">Calculate</button>
+
+            <div id="valueDisplay"></div>
+
+        </div>
+      </div>
+
+        <!-- <div class="finder">
+          <label for="nameInput">Find the date by name:</label>
+          <input type="text" id="nameInput" placeholder="Name"></input>
+          <button id="byName" onclick="displayDate()">Find the date!</button>
+        </div> -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="calculations.js"></script>
+  </body>
+</html>
