@@ -24,26 +24,29 @@
         <div class="rates">
 
           <label>From:</label>
-          <select>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+          <select id="fromCurrency">
+          <!-- <select id="fromCurrency"> -->
+          <option>EUR</option>
           </select>
 
           <label>To:</label>
-          <select>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+          <select id="toCurrency">
+            <option>EUR</option>
           </select>
 
-          <button id="byDate" onclick="displayName()">Calculate</button>
+          <button id="calculate" onclick="getRates()">Calculate</button>
+
+            <!-- <div id="selectionFromDisplay"></div>
+            <div id="selectionToDisplay"></div> -->
 
             <div id="valueDisplay"></div>
-
+            <div id="historyDisplay"></div>
         </div>
+
+        <!-- <div class="amounts">
+          <h2>Calculate a specific amount based on selected exchange rates:</h2>
+          <div id="amountDisplay"></div>
+        </div> -->
       </div>
 
         <!-- <div class="finder">
