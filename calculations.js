@@ -76,29 +76,30 @@ function getRates() {
 
 // COMPARISON TO YESTERDAY
 
-      // console.log(getToday());
-      // console.log(getToday().day);
-      // var yesterdayDay = (getToday().day) - 1;
-      // console.log(yesterdayDay);
-      // var currentMonth = (getToday().month);
-      // console.log(currentMonth);
-      //
-      //
-      // var currentYear = new Date().getFullYear();
-      // console.log(currentYear);
-      // var yesterdaysDate = currentYear + "-" + currentMonth + "-" + yesterdayDay;
-      // console.log(yesterdaysDate);
-      //
-      // var yesterdaysDateRateUrl =  "http://api.fixer.io/" + yesterdaysDate;
-      // console.log(yesterdaysDateRateUrl);
-      //
-      // $.getJSON(yesterdaysDateRateUrl, function(data){
-      //     var yesterdayRates = data.rates;
-      //     console.log(yesterdayRates);
-      //     var yesterdayResult = yesterdayRates[targetCurrency];
-      //     console.log("yesterday the rate was" + yesterdayResult);
-      //
-      //     })
+      console.log(getToday());
+      console.log(getToday().day);
+      var yesterdayDay = (getToday().day) - 1;
+      console.log(yesterdayDay);
+      var currentMonth = (getToday().month);
+      console.log(currentMonth);
+
+
+      var currentYear = new Date().getFullYear();
+      console.log(currentYear);
+      var yesterdaysDate = currentYear + "-" + currentMonth + "-" + yesterdayDay;
+      console.log(yesterdaysDate);
+
+      var yesterdaysDateRateUrl =  "http://api.fixer.io/" + yesterdaysDate + "?base=" + baseCurrency;
+      // date generator not generating 0 before if date < 10. That causes a problem with URL atm. http://api.fixer.io/2016-11-29?base=USD
+      console.log(yesterdaysDateRateUrl);
+
+      $.getJSON(yesterdaysDateRateUrl, function(data){
+          var yesterdayRates = data.rates;
+          console.log(yesterdayRates);
+          var yesterdayResult = yesterdayRates[targetCurrency];
+          console.log("yesterday the rate was" + yesterdayResult);
+
+          })
 
 
 
